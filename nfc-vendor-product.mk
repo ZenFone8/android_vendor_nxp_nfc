@@ -7,6 +7,9 @@
 NXP_NFC_HARDWARE := PN81T
 NXP_VENDOR_PATH := vendor/nxp
 
+BOARD_VENDOR_SEPOLICY_DIRS += \
+    $(NXP_VENDOR_PATH)/nfc/sepolicy
+
 PRODUCT_COPY_FILES += \
     $(NXP_VENDOR_PATH)/nfc/halimpl/libnfc-nxp-$(NXP_NFC_HARDWARE)_example.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf \
     $(NXP_VENDOR_PATH)/nfc/halimpl/libnfc-nxp_RF-$(NXP_NFC_HARDWARE)_example.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp_RF.conf \

@@ -29,7 +29,7 @@ license {
 }
 
 cc_library_shared {
-    name: "nfc_nci_nxp",
+    name: "nfc_nci_nxp.pn8x",
     defaults: ["hidl_defaults"],
     proprietary: true,
 
@@ -63,7 +63,7 @@ cc_library_shared {
         "android.hardware.nfc@1.1",
         "android.hardware.nfc@1.2",
         "android.hardware.secure_element@1.0",
-        "ese_spi_nxp",
+        "ese_spi_nxp.p73",
         "vendor.nxp.nxpese@1.0",
         "vendor.nxp.eventprocessor@1.0",
         "vendor.nxp.nxpnfc@2.0",
@@ -112,10 +112,10 @@ cc_library_shared {
 }
 
 cc_binary {
-    name: "android.hardware.nfc@1.2-service",
+    name: "android.hardware.nfc@1.2-service.pn8x",
     defaults: ["hidl_defaults"],
     proprietary: true,
-    init_rc: ["1.2/android.hardware.nfc@1.2-service.rc"],
+    init_rc: ["1.2/android.hardware.nfc@1.2-service.pn8x.rc"],
     relative_install_path: "hw",
     srcs: [
         "1.2/NxpNfcService.cpp",
@@ -125,7 +125,7 @@ cc_binary {
     ],
 
     shared_libs: [
-        "nfc_nci_nxp",
+        "nfc_nci_nxp.pn8x",
         "libbase",
         "libcutils",
         "libhardware",
@@ -134,7 +134,7 @@ cc_binary {
         "android.hardware.nfc@1.0",
         "android.hardware.nfc@1.1",
         "android.hardware.nfc@1.2",
-        "ese_spi_nxp",
+        "ese_spi_nxp.p73",
         "libhidlbase",
         "vendor.nxp.nxpnfc@2.0",
         "vendor.nxp.nxpese@1.0",

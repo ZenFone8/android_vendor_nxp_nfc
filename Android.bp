@@ -14,7 +14,18 @@
 // limitations under the License.
 
 package {
-    default_applicable_licenses: ["hardware_nxp_nfc_license"],
+    default_applicable_licenses: ["vendor_nxp_nfc_license"],
+}
+
+// Added automatically by a large-scale-change
+// See: http://go/android-license-faq
+license {
+    name: "vendor_nxp_nfc_license",
+    visibility: [":__subpackages__"],
+    license_kinds: [
+        "SPDX-license-identifier-Apache-2.0",
+    ],
+    // large-scale-change unable to identify any license_text files
 }
 
 cc_library_shared {
@@ -70,10 +81,10 @@ cc_library_shared {
         "halimpl/configs",
     ],
     include_dirs: [
-        "hardware/nxp/nfc/pn8x/extns/impl/",
-        "hardware/nxp/nfc/pn8x/extns/impl/nxpnfc/2.0",
-        "hardware/nxp/secure_element_extns/inc",
-        "hardware/nxp/secure_element/pn8x/libese-spi/src/include",
+        "vendor/nxp/nfc/extns/impl/",
+        "vendor/nxp/nfc/extns/impl/nxpnfc/2.0",
+        "vendor/nxp/secure_element_extns/inc",
+        "vendor/nxp/secure_element/libese-spi/src/include",
     ],
     export_include_dirs: [
         "extns/impl",
@@ -141,7 +152,7 @@ cc_binary {
         "halimpl/configs",
     ],
     include_dirs: [
-        "hardware/nxp/nfc/pn8x/extns/impl/nxpnfc/2.0",
-        "hardware/nxp/nfc/pn8x/halimpl/src/include",
+        "vendor/nxp/nfc/extns/impl/nxpnfc/2.0",
+        "vendor/nxp/nfc/halimpl/src/include",
     ],
 }

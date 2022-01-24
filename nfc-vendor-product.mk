@@ -4,6 +4,13 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+NXP_NFC_HARDWARE := PN81T
+NXP_VENDOR_PATH := vendor/nxp
+
+PRODUCT_COPY_FILES += \
+    $(NXP_VENDOR_PATH)/nfc/halimpl/libnfc-nxp-$(NXP_NFC_HARDWARE)_example.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf \
+    $(NXP_VENDOR_PATH)/nfc/halimpl/libnfc-nxp_RF-$(NXP_NFC_HARDWARE)_example.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp_RF.conf
+
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.hce.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hce.xml \
     frameworks/native/data/etc/android.hardware.nfc.hcef.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hcef.xml \

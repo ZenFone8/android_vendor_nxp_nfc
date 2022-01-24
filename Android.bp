@@ -116,6 +116,7 @@ cc_binary {
     defaults: ["hidl_defaults"],
     proprietary: true,
     init_rc: ["1.2/android.hardware.nfc@1.2-service.pn8x.rc"],
+    vintf_fragments: ["1.2/android.hardware.nfc@1.2-service.pn8x.xml"],
     relative_install_path: "hw",
     srcs: [
         "1.2/NxpNfcService.cpp",

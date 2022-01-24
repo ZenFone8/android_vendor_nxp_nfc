@@ -80,7 +80,7 @@ const char config_timestamp_path[] =
 const char default_nxp_config_path[] =
         "/vendor/etc/libnfc-nxp.conf";
 const char nxp_rf_config_path[] =
-        "/system/vendor/libnfc-nxp_RF.conf";
+        "/vendor/etc/libnfc-nxp_RF.conf";
 
 namespace {
 
